@@ -1,10 +1,5 @@
-
-
-
-
-
-
-
+var turn = 0;
+var end = false;
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
 });
@@ -41,3 +36,12 @@ $("#button9").click(function() {
     performLogic("#button9","#tile9");
 });
 
+function performLogic(buttonId, tileId){
+    $(button).hide()
+    var turn = 1;
+    if (turn % 1){
+        $(tile).text("0");
+    } else {
+        $(tile).text("X");
+    }    
+}
