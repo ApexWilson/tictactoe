@@ -50,34 +50,37 @@ function performLogic(buttonId, tileId){
         $(tileId).text("X");
     } else {
         $(tileId).text("0");
-    }    
+    } 
+    checkDiagonalWins();
+    checkHorizontalWins();
+    checkVerticalWins();   
 }
 
 function checkVerticalWins(){
-    if (end === true){
+    if (end){
         return;
     }
-    if ("#tile1"==="0"&&"#tile4"==="0"&&"#tile7"==="0"){
+    if ($("#tile1").text().trim()==="0"&&$("#tile4").text().trim()==="0"&&$("#tile7").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile1"==="X"&&"#tile4"==="X"&&"#tile7"==="X"){
+    if ($("#tile1").text().trim()==="X"&&$("#tile4").text().trim()==="X"&&$("#tile7").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
-    if ("#tile2"==="0"&&"#tile5"==="0"&&"#tile8"==="0"){
+    if ($("#tile2").text().trim()==="0"&&$("#tile5").text().trim()==="0"&&$("#tile8").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile2"==="X"&&"#tile5"==="X"&&"#tile8"==="X"){
+    if ($("#tile2").text().trim()==="X"&&$("#tile5").text().trim()==="X"&&$("#tile8").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
-    if ("#tile3"==="0"&&"#tile6"==="0"&&"#tile9"==="0"){
+    if ($("#tile3").text().trim()==="0"&&$("#tile6").text().trim()==="0"&&$("#tile9").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile3"==="X"&&"#tile6"==="X"&&"#tile9"==="X"){
+    if ($("#tile3").text().trim()==="X"&&$("#tile6").text().trim()==="X"&&$("#tile9").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
@@ -87,19 +90,19 @@ function checkDiagonalWins(){
     if (end === true){
         return;
     }
-    if ("#tile1"==="0"&&"#tile5"==="0"&&"#tile9"==="0"){
+    if ($("#tile1").text().trim()==="0"&&$("#tile5").text().trim()==="0"&&$("#tile9").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile1"==="X"&&"#tile5"==="X"&&"#tile9"==="X"){
+    if ($("#tile1").text().trim()==="X"&&$("#tile5").text().trim()==="X"&&$("#tile9").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
-    if ("#tile3"==="0"&&"#tile5"==="0"&&"#tile7"==="0"){
+    if ($("#tile3").text().trim()==="0"&&$("#tile5").text().trim()==="0"&&$("#tile7").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile3"==="X"&&"#tile5"==="X"&&"#tile7"==="X"){
+    if ($("#tile3").text().trim()==="X"&&$("#tile5").text().trim()==="0"==="X"&&$("#tile7").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
@@ -109,27 +112,27 @@ function checkHorizontalWins(){
     if (end === true){
         return;
     }
-    if ("#tile1"==="0"&&"#tile2"==="0"&&"#tile3"==="0"){
+    if ($("#tile1").text().trim()==="0"&&$("#tile2").text().trim()==="0"&&$("#tile3").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile1"==="X"&&"#tile2"==="X"&&"#tile3"==="X"){
+    if ($("#tile1").text().trim()==="X"&&$("#tile2").text().trim()==="X"&&$("#tile3").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
-    if ("#tile4"==="0"&&"#tile5"==="0"&&"#tile6"==="0"){
+    if ($("#tile4").text().trim()==="0"&&$("#tile5").text().trim()==="0"&&$("#tile6").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile4"==="X"&&"#tile5"==="X"&&"#tile6"==="X"){
+    if ($("#tile4").text().trim()==="X"&&$("#tile5").text().trim()==="X"&&$("#tile6").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
-    if ("#tile7"==="0"&&"#tile8"==="0"&&"#tile9"==="0"){
+    if ($("#tile7").text().trim()==="0"&&$("#tile8").text().trim()==="0"&&$("#tile9").text().trim()==="0"){
         end = true;
         $("h1").text("Player 1 Wins");
     }
-    if ("#tile7"==="X"&&"#tile8"==="X"&&"#tile9"==="X"){
+    if ($("#tile7").text().trim()==="X"&&$("#tile8").text().trim()==="X"&&$("#tile9").text().trim()==="X"){
         end = true;
         $("h1").text("Player 2 Wins");
     }
